@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>RB STORE</h1>
+        <h2>FREE FIRE</h2>
+
+        <label for="">MASUKAN ID</label>
+        <input type="number" value="id" class="id" placeholder="61********">
+
+        <label for="">PILIH DIAMOND</label>
+        <select class="dm">
+            <option></option>
+            <option>5 DM 1.200K</option>
+            <option>12 DM 2.200K</option>
+            <option>50 DM 8.200K</option>
+            <option>70 DM 10.500K</option>
+        </select>
+
+        <label>METODE PEMBAYARAN</label>
+        <select class="mp">
+            <option></option>
+            <option>DANA</option>
+            <option>PULSA</option>
+            <option>QRIS</option>
+        </select>
+
+        <label for="">CODE</label>
+        <input type="text" class="code" placeholder="TIDAK WAJIB!">
+
+        <label for="">EMAIL</label>
+        <input type="email" class="el" placeholder="*****@gmail.com">
+        <button type="button" onclick="sendwhatsapp();">BELI SEKARANG</button>
+    </form>
+    <p>SELAMAT BERBELANJA</p>
+    <script>
+        function sendwhatsapp(){ 
+        var phonenumber = "+629635707538";
+
+        var id = document.querySelector(".id").value;
+        var dm = document.querySelector(".dm").value;
+
+        var url = "https://wa.me/" + phonenumber + "?text="
+        +"*ID : * " +id+"%0a"
+        +"*DIAMOND :* " +dm+"%0a%0a";
+
+        window.open(url, '_blank').focus();
+        }
+    </script>
+</body>
+</html>
